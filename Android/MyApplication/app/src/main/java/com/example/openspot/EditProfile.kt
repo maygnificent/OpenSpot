@@ -68,6 +68,7 @@ class EditProfile : AppCompatActivity() {
         var editEmail: EditText?
         editEmail = findViewById<View>(R.id.emailUpdate) as EditText
         if (!isValidEmail(editEmail!!.text.toString())) {
+            editEmail.setError("No Email Entered")
             Toast.makeText(applicationContext, "Please enter valid Email", Toast.LENGTH_LONG)
                 .show()
             return false
